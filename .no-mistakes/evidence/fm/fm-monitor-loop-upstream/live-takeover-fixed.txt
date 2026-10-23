@@ -1,0 +1,12 @@
+[fixed] arm A pid=80470, its watcher pid=80523 (ppid=80470)
+watcher: started pid=80523 (beacon fresh)
+[fixed] watcher is inside a 12s herdr event wait (command substitution)
+[fixed] take-over arm B pid=83483 started at t=0; left watcher exited at t=12.3s
+[fixed] arm B output:
+    watcher: started pid=85761 (beacon fresh)
+[fixed] lock now pid=85761 parent=83483 (arm B=83483)
+[fixed] .watcher-down: acked:downtime:seed.1.prior
+[fixed] cycle ledger (reason/disposition columns):
+    arm_pid=80470	watcher_pid=80523	origin=started	started_at=1792784193	ended_at=1792784217	exit_code=143	signal=TERM	reason=signal-exit	beacon_age=24	lock_before=pid:80523|identity:Fri Oct 23 21:36:33 2026     bash $W/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none
+    arm_pid=83483	watcher_pid=80523	origin=attached	started_at=1792784205	ended_at=1792784218	exit_code=unknown	signal=unknown	reason=taken-over	beacon_age=25	lock_before=pid:80523|identity:Fri Oct 23 21:36:33 2026     bash $W/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=started:85761
+[fixed] lab removed

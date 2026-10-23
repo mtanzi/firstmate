@@ -1,0 +1,12 @@
+[stop-bound] arm A pid=6443, its watcher pid=6533 (ppid=6443)
+watcher: started pid=6533 (beacon fresh)
+[stop-bound] watcher is inside a 30s herdr event wait (command substitution)
+[stop-bound] arm B first status line at t=8.5s, watcher alive: yes
+[stop-bound] take-over arm B pid=11144 started at t=0; left watcher exited at t=30.0s
+[stop-bound] arm B output:
+    watcher: FAILED - pid=6533 did not stop
+[stop-bound] lock now pid= parent= (arm B=11144)
+[stop-bound] .watcher-down: pending:downtime:6533.1792784443.sbftBH
+[stop-bound] cycle ledger (reason/disposition columns):
+    arm_pid=6443	watcher_pid=6533	origin=started	started_at=1792784400	ended_at=1792784443	exit_code=143	signal=TERM	reason=signal-exit	beacon_age=42	lock_before=pid:6533|identity:Fri Oct 23 21:40:00 2026     bash $W/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none
+[stop-bound] lab removed

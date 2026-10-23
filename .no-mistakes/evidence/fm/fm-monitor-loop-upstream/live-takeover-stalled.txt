@@ -1,0 +1,14 @@
+[stalled-takeover] arm A pid=6441, its watcher pid=6531 (ppid=6441)
+watcher: started pid=6531 (beacon fresh)
+[stalled-takeover] watcher is inside a 30s herdr event wait (command substitution)
+[stalled-takeover] arm B first status line at t=11.2s, watcher alive: yes
+[stalled-takeover] take-over arm B pid=10976 started at t=0; left watcher exited at t=30.1s
+[stalled-takeover] arm B output:
+    watcher: attached pid=6531 (beacon 23s)
+    watcher: FAILED - cycle ended without an actionable reason
+[stalled-takeover] lock now pid= parent= (arm B=10976)
+[stalled-takeover] .watcher-down: pending:downtime:6531.1792784443.VymkIz
+[stalled-takeover] cycle ledger (reason/disposition columns):
+    arm_pid=6441	watcher_pid=6531	origin=started	started_at=1792784400	ended_at=1792784443	exit_code=143	signal=TERM	reason=signal-exit	beacon_age=42	lock_before=pid:6531|identity:Fri Oct 23 21:40:00 2026     bash $W/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none
+    arm_pid=10976	watcher_pid=6531	origin=attached	started_at=1792784424	ended_at=1792784455	exit_code=unknown	signal=unknown	reason=attached-cycle-ended	beacon_age=54	lock_before=pid:6531|identity:Fri Oct 23 21:40:00 2026     bash $W/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none
+[stalled-takeover] lab removed
