@@ -1,0 +1,23 @@
+session=fm-lab-takeover-pre-91321-25978 pane=w1:p2 lab=/private/var/folders/94/qhy25_nd2k1_lztt281j9knm0000gn/T/fm-lab.edpr5H root=/private/var/folders/94/qhy25_nd2k1_lztt281j9knm0000gn/T/fm-prefix-root.QOrsnE
+seed: arm0 watcher: FAILED - watcher cycle exited 143 without an actionable reason | stop: watcher: FAILED - pid=91577 did not stop | rearm: check: rearm-resurface 
+seed: main acked with [--ack-through 0 --recovery-generation 91577.1792949729.dLppGo]; marker before take-over: acked:handling:91577.1792949729.dLppGo
+armA=94477 watcher=94499; reader: 95157 /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /private/var/folders/94/qhy25_nd2k1_lztt281j9knm0000gn/T/fm-prefix-root.QOrsnE/bin/backends/herdr-eventwait.py /Users/mtanzi/.config/herdr/sessions/fm-lab-takeover-pre-91321-25978/herdr.sock 15 w1:p2
+take-over closed old watcher after 618s; marker right after handover: pending:downtime:94499.1792949747.qNMJ9s
+--- elapsed since take-over: 622s; old watcher alive: no; take-over arm alive: no; arm A alive: no
+lock now: 
+new watcher parent:  (take-over arm=95370)
+--- wake queue:
+--- .watcher-down:
+pending:downtime:94499.1792949747.qNMJ9s
+--- take-over arm output:
+watcher: attached pid=94499 (beacon 11s)
+watcher: FAILED - cycle ended without an actionable reason
+--- arm A output:
+watcher: started pid=94499 (beacon fresh)
+/private/var/folders/94/qhy25_nd2k1_lztt281j9knm0000gn/T/fm-prefix-root.QOrsnE/bin/backends/herdr.sh: line 3913: printf: write error: Broken pipe
+/private/var/folders/94/qhy25_nd2k1_lztt281j9knm0000gn/T/fm-prefix-root.QOrsnE/bin/backends/herdr.sh: line 3914: printf: write error: Broken pipe
+watcher: FAILED - watcher cycle exited 143 without an actionable reason
+--- .watch-cycle-exits.log:
+arm_pid=94477	watcher_pid=94499	origin=started	started_at=1792949731	ended_at=1792949747	exit_code=143	signal=TERM	reason=signal-exit	beacon_age=16	lock_before=pid:94499|identity:Sun Oct 25 17:35:31 2026     bash /private/var/folders/94/qhy25_nd2k1_lztt281j9knm0000gn/T/fm-prefix-root.QOrsnE/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none
+arm_pid=95370	watcher_pid=94499	origin=attached	started_at=1792949742	ended_at=1792950351	exit_code=unknown	signal=unknown	reason=attached-cycle-ended	beacon_age=620	lock_before=pid:94499|identity:Sun Oct 25 17:35:31 2026     bash /private/var/folders/94/qhy25_nd2k1_lztt281j9knm0000gn/T/fm-prefix-root.QOrsnE/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none
+teardown fm-lab-takeover-pre-91321-25978 ok

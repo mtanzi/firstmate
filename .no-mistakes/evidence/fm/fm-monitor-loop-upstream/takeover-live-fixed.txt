@@ -1,0 +1,25 @@
+session=fm-lab-takeover-fix-70242-250 pane=w1:p2 lab=/private/var/folders/94/qhy25_nd2k1_lztt281j9knm0000gn/T/fm-lab.a2pSVP root=/Users/mtanzi/.no-mistakes/worktrees/233970cc3bb4/01M5T0J59DD9MRHXWK8C5HEJ01
+seed: arm0 watcher: FAILED - watcher cycle exited 143 without an actionable reason | stop: watcher: FAILED - pid=70511 did not stop | rearm: watcher: started pid=72236 (beacon fresh) check: rearm-resurface 
+seed: main acked with [--ack-through 0 --recovery-generation 70511.1792949619.UKEsHL]; marker before take-over: acked:handling:70511.1792949619.UKEsHL
+armA=73206 watcher=73239; reader: 73898 /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/mtanzi/.no-mistakes/worktrees/233970cc3bb4/01M5T0J59DD9MRHXWK8C5HEJ01/bin/backends/herdr-eventwait.py /Users/mtanzi/.config/herdr/sessions/fm-lab-takeover-fix-70242-250/herdr.sock 15 w1:p2
+take-over closed old watcher after 15s; marker right after handover: acked:handling:70511.1792949619.UKEsHL
+--- elapsed since take-over: 19s; old watcher alive: no; take-over arm alive: no; arm A alive: no
+lock now: 
+new watcher parent:  (take-over arm=73962)
+--- wake queue:
+1792949640	1	stale	fm-lab-takeover-fix-70242-250:w1:p2	stale: fm-lab-takeover-fix-70242-250:w1:p2
+--- .watcher-down:
+pending:downtime:78924.1792949640.UxEG0M
+--- take-over arm output:
+watcher: started pid=78924 (beacon fresh)
+stale: fm-lab-takeover-fix-70242-250:w1:p2
+--- arm A output:
+watcher: started pid=73239 (beacon fresh)
+/Users/mtanzi/.no-mistakes/worktrees/233970cc3bb4/01M5T0J59DD9MRHXWK8C5HEJ01/bin/backends/herdr.sh: line 3913: printf: write error: Broken pipe
+/Users/mtanzi/.no-mistakes/worktrees/233970cc3bb4/01M5T0J59DD9MRHXWK8C5HEJ01/bin/backends/herdr.sh: line 3914: printf: write error: Broken pipe
+watcher: FAILED - watcher cycle exited 143 without an actionable reason
+--- .watch-cycle-exits.log:
+arm_pid=73206	watcher_pid=73239	origin=started	started_at=1792949621	ended_at=1792949637	exit_code=143	signal=TERM	reason=signal-exit	beacon_age=16	lock_before=pid:73239|identity:Sun Oct 25 17:33:41 2026     bash /Users/mtanzi/.no-mistakes/worktrees/233970cc3bb4/01M5T0J59DD9MRHXWK8C5HEJ01/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none
+arm_pid=73962	watcher_pid=73239	origin=attached	started_at=1792949623	ended_at=1792949638	exit_code=unknown	signal=unknown	reason=taken-over	beacon_age=17	lock_before=pid:73239|identity:Sun Oct 25 17:33:41 2026     bash /Users/mtanzi/.no-mistakes/worktrees/233970cc3bb4/01M5T0J59DD9MRHXWK8C5HEJ01/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=started:78924
+arm_pid=73962	watcher_pid=78924	origin=started	started_at=1792949638	ended_at=1792949640	exit_code=0	signal=none	reason=actionable-stale	beacon_age=1	lock_before=pid:78924|identity:Sun Oct 25 17:33:58 2026     bash /Users/mtanzi/.no-mistakes/worktrees/233970cc3bb4/01M5T0J59DD9MRHXWK8C5HEJ01/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none
+teardown fm-lab-takeover-fix-70242-250 ok
